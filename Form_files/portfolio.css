@@ -1,0 +1,50 @@
+h1{
+  background: green;
+  text-align: center;
+}
+
+body{
+  font-family:serif;
+}
+
+.header{
+    border-bottom: 1px solid black;
+}
+
+.card{
+  border: 1px solid #ccc;
+  width: 200px;
+  
+  text-align: left;
+  padding:5px;
+  background-color: white;
+  transition:all 0.5s ease ;
+  box-shadow:0 10px 20px rgba(0,0,0,0.15)
+  
+}
+
+.card:hover{
+  transform: scale(1.05);
+  box-shadow: 0px 8px 5px #74b57a;
+}
+
+.card img{
+ width: 100%;
+ margin: auto; 
+ margin-top: -15px;
+ display: block;
+ object-fit: cover;
+}
+
+.portfolio{
+  display: flex;
+  gap:10px;
+}
+
+ .p-color {
+    color:rgb(123, 137, 169);
+}
+
+body{
+  padding: 30px;
+}

@@ -1,0 +1,56 @@
+.container{
+    display:flex;
+    flex-direction: column;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+    border:5px solid ;
+    border-image-source: linear-gradient(to left,rgb(85, 169, 112), rgb(7, 192, 93));
+    border-image-slice: 1;  /* aide à etirer le degradé sur les bords */
+    padding: 15px;
+    margin: auto;background-color: white;
+
+}
+
+body{
+    background-color: black;
+}
+
+input{
+    padding:8px;
+    border:1px solid rgb(123, 137, 136)
+}
+button{
+    display:block;
+    width:100%;
+    padding:10px;
+    background-color: rgb(12, 182, 115);
+    color: rgba(0, 0, 0, 0.884);
+    border:1px solid rgb(123, 137, 136);
+}
+
+textarea{
+    width: 95%;
+    resize: none;
+}
+
+input[type="number"],[type="text"], [type="email"],select{
+    width: 90%;
+}
+
+@media screen and (max-width: 600px)  {
+    .container{
+    display:flex;
+    flex-direction: column;
+    width: 90%;
+    border: 2px solid black;
+    padding: 5px;
+    background-color: rgb(5, 96, 19);
+
+}
+body{
+    background-color: rgb(52, 98, 3);
+    margin-top:10% ;
+}
+
+}

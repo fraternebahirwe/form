@@ -1,0 +1,38 @@
+body{
+    display:flex;
+    flex-direction: column;
+    /* margin-left:40% ;
+    margin-right: 40%; */
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+    border:5px solid ;
+    border-image-source: linear-gradient(to left,rgb(85, 169, 112), rgb(7, 192, 93));
+    border-image-slice: 1;  /* aide à etirer le degradé sur les bords */
+    padding: 15px;
+    margin: auto;
+}
+
+input{
+    padding:10px;
+    border:1px solid rgb(123, 137, 136);
+}
+
+button{
+    display:block;
+    width:100%;
+    padding:10px;
+    background-color: rgb(12, 182, 115);
+    color: rgba(0, 0, 0, 0.884);
+    border:1px solid rgb(123, 137, 136);
+}
+
+textarea{
+    width: 100%;
+    resize: none;
+}
+
+input[type="number"],[type="text"], [type="email"],select{
+     width: 100%;
+     
+}
