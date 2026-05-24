@@ -45,11 +45,11 @@ input[type="number"],[type="text"], [type="email"],select{
     width: 90%;
     border: 2px solid black;
     padding: 5px;
-    background-color: rgb(5, 96, 19);
+    background-color: rgb(255, 253, 253);
 
 }
 body{
-    background-color: rgb(52, 98, 3);
+    background-color: rgb(149, 191, 107);
     margin-top:10% ;
 }
 
