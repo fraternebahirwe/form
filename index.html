@@ -1,75 +1,362 @@
+```html
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Membership Form</title>
-  <link rel="stylesheet" href="form.css">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="A survey form to share your experience, preferences, and feedback."
+  >
+
+  <meta name="author" content="Fraterne">
+
+  <title>Survey Form</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- JavaScript -->
+  <script src="script.js" defer></script>
 </head>
 
 <body>
-  <main class="page">
-    <section class="container">
-      <h1>Membership Form</h1>
-      <p class="intro">Fill out this form to join our developer community.</p>
 
-      <form action="" method="get">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input id="name" type="text" placeholder="Enter your name">
-        </div>
+  <!-- =========================
+       HEADER
+  ========================== -->
+  <header class="header">
+    <div class="container">
+      <h1 id="title">Survey Form</h1>
 
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input id="email" type="email" placeholder="Enter your email">
-        </div>
+      <p id="description">
+        Thank you for taking the time to help us improve our platform.
+      </p>
+    </div>
+  </header>
 
-        <div class="form-group">
-          <label for="age">Age</label>
-          <input id="age" type="number" placeholder="Enter your age">
-        </div>
 
-        <div class="form-group">
-          <label for="role">Which option best describes you?</label>
-          <select id="role">
-            <option value="">Select your role</option>
-            <option value="student">Student</option>
-            <option value="worker">Worker</option>
-            <option value="unemployed">Unemployed</option>
-          </select>
-        </div>
+  <!-- =========================
+       MAIN CONTENT
+  ========================== -->
+  <main>
 
-        <fieldset>
-          <legend>Would you recommend GeeksforGeeks to a friend?</legend>
+    <section class="survey-section" id="survey">
 
-          <label><input type="radio" name="recommend" checked> Yes</label>
-          <label><input type="radio" name="recommend"> No</label>
-          <label><input type="radio" name="recommend"> Maybe</label>
-        </fieldset>
+      <div class="container">
 
-        <fieldset>
-          <legend>Languages and frameworks known</legend>
+        <form
+          id="survey-form"
+          action=""
+          method="get"
+        >
 
-          <label><input type="checkbox"> C</label>
-          <label><input type="checkbox"> C++</label>
-          <label><input type="checkbox"> C#</label>
-          <label><input type="checkbox"> Java</label>
-          <label><input type="checkbox"> Python</label>
-          <label><input type="checkbox" checked> JavaScript</label>
-          <label><input type="checkbox"> React</label>
-          <label><input type="checkbox"> Angular</label>
-          <label><input type="checkbox"> Django</label>
-          <label><input type="checkbox"> Spring</label>
-        </fieldset>
+          <!-- =========================
+               PERSONAL INFORMATION
+          ========================== -->
 
-        <div class="form-group">
-          <label for="comments">Any comments or suggestions?</label>
-          <textarea id="comments" placeholder="Enter your comments here"></textarea>
-        </div>
+          <div class="form-group">
 
-        <button type="submit">Submit</button>
-      </form>
+            <label for="name">
+              Name
+            </label>
+
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Enter your name"
+              autocomplete="name"
+              required
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="email">
+              Email
+            </label>
+
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Enter your email"
+              autocomplete="email"
+              required
+            >
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="age">
+              Age
+            </label>
+
+            <input
+              id="age"
+              name="age"
+              type="number"
+              min="13"
+              max="100"
+              placeholder="Enter your age"
+              required
+            >
+
+          </div>
+
+
+          <!-- =========================
+               ROLE
+          ========================== -->
+
+          <div class="form-group">
+
+            <label for="role">
+              Which option best describes you?
+            </label>
+
+            <select
+              id="role"
+              name="role"
+              required
+            >
+
+              <option
+                value=""
+                disabled
+                selected
+              >
+                Select your role
+              </option>
+
+              <option value="student">
+                Student
+              </option>
+
+              <option value="worker">
+                Worker
+              </option>
+
+              <option value="unemployed">
+                Unemployed
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <!-- =========================
+               RECOMMENDATION
+          ========================== -->
+
+          <fieldset class="form-group">
+
+            <legend>
+              Would you recommend GeeksforGeeks to a friend?
+            </legend>
+
+            <label>
+              <input
+                type="radio"
+                name="recommend"
+                value="yes"
+                checked
+              >
+              Yes
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="recommend"
+                value="no"
+              >
+              No
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="recommend"
+                value="maybe"
+              >
+              Maybe
+            </label>
+
+          </fieldset>
+
+
+          <!-- =========================
+               LANGUAGES & FRAMEWORKS
+          ========================== -->
+
+          <fieldset class="form-group">
+
+            <legend>
+              Languages and frameworks known
+            </legend>
+
+            <label>
+              <input
+                type="checkbox"
+                name="languages"
+                value="c"
+              >
+              C
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                name="languages"
+                value="cpp"
+              >
+              C++
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                name="languages"
+                value="csharp"
+              >
+              C#
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                name="languages"
+                value="java"
+              >
+              Java
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                name="languages"
+                value="python"
+              >
+              Python
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                name="languages"
+                value="javascript"
+                checked
+              >
+              JavaScript
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                name="languages"
+                value="react"
+              >
+              React
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                name="languages"
+                value="angular"
+              >
+              Angular
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                name="languages"
+                value="django"
+              >
+              Django
+            </label>
+
+            <label>
+              <input
+                type="checkbox"
+                name="languages"
+                value="spring"
+              >
+              Spring
+            </label>
+
+          </fieldset>
+
+
+          <!-- =========================
+               COMMENTS
+          ========================== -->
+
+          <div class="form-group">
+
+            <label for="comments">
+              Any comments or suggestions?
+            </label>
+
+            <textarea
+              id="comments"
+              name="comments"
+              rows="5"
+              placeholder="Enter your comments here"
+            ></textarea>
+
+          </div>
+
+
+          <!-- =========================
+               SUBMIT BUTTON
+          ========================== -->
+
+          <button
+            type="submit"
+            id="submit"
+          >
+            Submit
+          </button>
+
+        </form>
+
+      </div>
+
     </section>
+
   </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer class="footer">
+
+    <div class="container">
+
+      <p>
+        &copy; 2026 Survey Form. All rights reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
 </body>
 </html>
+```
